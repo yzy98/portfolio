@@ -12,7 +12,17 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "astro": "^5.8.0"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.4.0",
+    "@fontsource/inter": "^5.2.5",
+    "@fontsource/lora": "^5.2.5",
+    "@tailwindcss/vite": "^4.1.8",
+    "astro": "^5.8.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.13.2",
