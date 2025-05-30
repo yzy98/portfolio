@@ -1,47 +1,28 @@
-# Astro Starter Kit: Minimal
+# Portfolio
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+A modern portfolio website built with Astro, featuring a clean design and smooth transitions. This project showcases my work, blog, and skills as a Web Developer.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Tech Stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Framework:** [Astro](https://astro.build/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Linting:** [ESLint](https://eslint.org/)
+- **Fonts:** [Fontsource (Lora, Roboto)](https://fontsource.org/)
+- **Content:** MDX, RSS Feed, Sitemap
 
-## 🚀 Project Structure
+## Available Commands
 
-Inside of your Astro project, you'll see the following folders and files:
+In the project directory, you can run the following commands:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+| Command          | Description                                                                                                      |
+| :--------------- | :--------------------------------------------------------------------------------------------------------------- |
+| `pnpm dev`       | Runs the app in development mode. Open [http://localhost:4321](http://localhost:4321) to view it in the browser. |
+| `pnpm build`     | Builds the app for production to the `dist/` folder.                                                             |
+| `pnpm preview`   | Serves the production build locally for preview.                                                                 |
+| `pnpm astro ...` | Runs Astro CLI commands.                                                                                         |
+| `pnpm lint`      | Lints the codebase using ESLint.                                                                                 |
+| `pnpm lint:fix`  | Lints and automatically fixes ESLint errors.                                                                     |
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## License
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
