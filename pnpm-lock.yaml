@@ -17,10 +17,10 @@ dependencies:
   '@astrojs/sitemap':
     specifier: ^3.4.0
     version: 3.4.0
-  '@fontsource/inter':
+  '@fontsource/lora':
     specifier: ^5.2.5
     version: 5.2.5
-  '@fontsource/lora':
+  '@fontsource/roboto':
     specifier: ^5.2.5
     version: 5.2.5
   '@tailwindcss/typography':
@@ -822,12 +822,12 @@ packages:
       levn: 0.4.1
     dev: true
 
-  /@fontsource/inter@5.2.5:
-    resolution: {integrity: sha512-kbsPKj0S4p44JdYRFiW78Td8Ge2sBVxi/PIBwmih+RpSXUdvS9nbs1HIiuUSPtRMi14CqLEZ/fbk7dj7vni1Sg==}
-    dev: false
-
   /@fontsource/lora@5.2.5:
     resolution: {integrity: sha512-Jr+jXw+0USPcCBKFfEyPgwKV3dD6w066PIC+1VXgINwjkOEXVX6enqEjz7uGe2WoUjOG+VbIPp4SIlzpMlWzdw==}
+    dev: false
+
+  /@fontsource/roboto@5.2.5:
+    resolution: {integrity: sha512-70r2UZ0raqLn5W+sPeKhqlf8wGvUXFWlofaDlcbt/S3d06+17gXKr3VNqDODB0I1ASme3dGT5OJj9NABt7OTZQ==}
     dev: false
 
   /@humanfs/core@0.19.1:
