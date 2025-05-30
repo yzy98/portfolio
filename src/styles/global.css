@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@plugin '@tailwindcss/typography';
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
@@ -37,7 +39,7 @@ footer {
   @apply py-5 text-sm;
 }
 
-/* article {
+article {
   @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
   @apply prose-headings:font-semibold prose-p:font-serif;
   @apply prose-headings:text-black prose-headings:dark:text-white;
@@ -70,4 +72,4 @@ html #back-to-top {
 
 html.scrolled #back-to-top {
   @apply opacity-100 pointer-events-auto;
-} */
+}

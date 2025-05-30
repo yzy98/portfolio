@@ -1,34 +1,26 @@
 ---
-import { getCollection, render } from "astro:content";
+import { render } from "astro:content";
 
 import ArrowCard from "@/components/arrow-card.astro";
 import Container from "@/components/container.astro";
 import Link from "@/components/link.astro";
 import { HOME, SITE, SOCIALS } from "@/consts";
 import PageLayout from "@/layouts/page-layout.astro";
+import { getBlogs, getProjects, getWorks } from "@/lib/data-utils";
 import { dateRange } from "@/lib/utils";
 
-const blog = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
+const displayedBlogs = (await getBlogs()).slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+const displayedProjects = (await getProjects()).slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
-const allWork = (await getCollection("work"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
-  .slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
+const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
 
 const work = await Promise.all(
-  allWork.map(async (item) => {
+  displayedWorks.map(async (item) => {
     const { Content } = await render(item);
     return { ...item, Content };
   }),
 );
-
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -74,7 +66,7 @@ const work = await Promise.all(
           </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {blog.map(post => (
+          {displayedBlogs.map(post => (
             <li>
               <ArrowCard entry={post} />
             </li>
@@ -121,7 +113,7 @@ const work = await Promise.all(
           </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {projects.map(project => (
+          {displayedProjects.map(project => (
             <li>
               <ArrowCard entry={project} />
             </li>
