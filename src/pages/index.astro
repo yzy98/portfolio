@@ -4,10 +4,10 @@ import { render } from "astro:content";
 import ArrowCard from "@/components/arrow-card.astro";
 import Container from "@/components/container.astro";
 import Link from "@/components/link.astro";
+import WorkCard from "@/components/work-card.astro";
 import { HOME, SITE, SOCIALS } from "@/consts";
 import PageLayout from "@/layouts/page-layout.astro";
 import { getBlogs, getProjects, getWorks } from "@/lib/data-utils";
-import { dateRange } from "@/lib/utils";
 
 const displayedBlogs = (await getBlogs()).slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
@@ -84,20 +84,7 @@ const work = await Promise.all(
         </div>
         <ul class="flex flex-col space-y-4">
           {work.map(entry => (
-            <li>
-              <div class="text-sm opacity-75">
-                {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-              </div>
-              <div class="font-semibold text-black dark:text-white">
-                {entry.data.company}
-              </div>
-              <div class="text-sm opacity-75">
-                {entry.data.role}
-              </div>
-              <article>
-                <entry.Content />
-              </article>
-            </li>
+            <WorkCard entry={entry} animate={false} />
           ))}
         </ul>
       </section>
