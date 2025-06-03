@@ -8,6 +8,9 @@ import WorkCard from "@/components/work-card.astro";
 import { HOME, SITE, SOCIALS } from "@/consts";
 import PageLayout from "@/layouts/page-layout.astro";
 import { getBlogs, getProjects, getWorks } from "@/lib/data-utils";
+import GithubSvg from "@/svg/github-svg.astro";
+import MailSvg from "@/svg/mail-svg.astro";
+import XSvg from "@/svg/x-svg.astro";
 
 const displayedBlogs = (await getBlogs()).slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
@@ -58,16 +61,16 @@ const work = await Promise.all(
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
-            Latest posts
+            Recent projects
           </h5>
-          <Link href="/blog">
-            See all posts
+          <Link href="/projects">
+            See all projects
           </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {displayedBlogs.map(post => (
+          {displayedProjects.map(project => (
             <li>
-              <ArrowCard entry={post} />
+              <ArrowCard entry={project} />
             </li>
           ))}
         </ul>
@@ -92,16 +95,16 @@ const work = await Promise.all(
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
-            Recent projects
+            Latest posts
           </h5>
-          <Link href="/projects">
-            See all projects
+          <Link href="/blog">
+            See all posts
           </Link>
         </div>
         <ul class="flex flex-col gap-4">
-          {displayedProjects.map(project => (
+          {displayedBlogs.map(post => (
             <li>
-              <ArrowCard entry={project} />
+              <ArrowCard entry={post} />
             </li>
           ))}
         </ul>
@@ -119,16 +122,17 @@ const work = await Promise.all(
         </article>
         <ul class="flex flex-wrap gap-2">
           {SOCIALS.map(SOCIAL => (
-            <li class="flex gap-x-2 text-nowrap">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
+            <li class="flex gap-x-2">
+              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`} underline={false}>
+                {SOCIAL.NAME === "x" && <XSvg height={18} width={18} />}
+                {SOCIAL.NAME === "github" && <GithubSvg height={18} width={18} />}
               </Link>
-              /
+              |
             </li>
           ))}
-          <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
-              {SITE.EMAIL}
+          <li class="flex">
+            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`} underline={false}>
+              <MailSvg height={18} width={18} />
             </Link>
           </li>
         </ul>
