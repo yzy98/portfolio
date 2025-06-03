@@ -65,7 +65,8 @@ document.addEventListener("astro:before-swap", e =>
 function init() {
   preloadTheme();
   onScroll();
-  animate();
+  initSlideEnterToArticle();
+  slideEnter();
 
   const backToTop = document.getElementById("back-to-top");
   backToTop?.addEventListener("click", event => scrollToTop(event));
@@ -101,13 +102,21 @@ function init() {
   document.addEventListener("scroll", onScroll);
 }
 
-function animate() {
-  const animateElements = document.querySelectorAll(".animate");
+function initSlideEnterToArticle() {
+  const article = document.querySelector(".slide-enter-article");
+  if (!article)
+    return;
 
-  animateElements.forEach((element, index) => {
-    setTimeout(() => {
-      element.classList.add("show");
-    }, index * 150);
+  const children = Array.from(article.children);
+  children.forEach((child) => {
+    child.classList.add("slide-enter");
+  });
+}
+
+function slideEnter() {
+  const slideEnterElements = document.querySelectorAll(".slide-enter");
+  slideEnterElements.forEach((element, index) => {
+    element.style.setProperty("--stagger", index + 1);
   });
 }
 

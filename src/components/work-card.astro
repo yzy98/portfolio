@@ -9,13 +9,13 @@ type Props = {
   entry: CollectionEntry<"work"> & {
     Content: Awaited<ReturnType<typeof render>>["Content"];
   };
-  animate: boolean;
+  slide: boolean;
 };
 
-const { entry, animate } = Astro.props;
+const { entry, slide } = Astro.props;
 ---
 
-<li class={animate ? "animate" : ""}>
+<li class={slide ? "slide-enter" : ""}>
   <div class="text-sm opacity-75">
     {dateRange(entry.data.dateStart, entry.data.dateEnd)}
   </div>

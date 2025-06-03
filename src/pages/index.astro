@@ -28,27 +28,27 @@ const work = await Promise.all(
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
+    <h4 class="slide-enter font-semibold text-black dark:text-white">
       Hi, I'm Zi Yang <span class="text-xl">👋🏻</span>
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
-          <p class="animate">
+          <p class="slide-enter">
             I am a Web Developer living in
             <Link href="https://en.wikipedia.org/wiki/Suzhou" aria-label="Suzhou, China" external>
               Suzhou, China,
             </Link>
             who focuses on building robust solutions and enjoys working with modern web technologies.
           </p>
-          <p class="animate">
+          <p class="slide-enter">
           Previously, I received my master's degree in Information Technology from
           <Link href="https://www.uq.edu.au/" aria-label="The University of Queensland" external>
             The University of Queensland,
           </Link>
           where I developed a strong foundation in software development and problem-solving.
           </p>
-          <p class="animate">
+          <p class="slide-enter">
             Recently, I shipped a project named
             <Link href="https://ytbcc.zyang.xyz" aria-label="YouTube Comments Chat" external>
               YouTube Comments Chat.
@@ -58,7 +58,7 @@ const work = await Promise.all(
         </article>
       </section>
 
-      <section class="animate space-y-6">
+      <section class="slide-enter space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
             Recent projects
@@ -76,7 +76,7 @@ const work = await Promise.all(
         </ul>
       </section>
 
-      <section class="animate space-y-6">
+      <section class="slide-enter space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
             Work Experience
@@ -87,12 +87,12 @@ const work = await Promise.all(
         </div>
         <ul class="flex flex-col space-y-4">
           {work.map(entry => (
-            <WorkCard entry={entry} animate={false} />
+            <WorkCard entry={entry} slide={false} />
           ))}
         </ul>
       </section>
 
-      <section class="animate space-y-6">
+      <section class="slide-enter space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
             Latest posts
@@ -110,7 +110,7 @@ const work = await Promise.all(
         </ul>
       </section>
 
-      <section class="animate space-y-4">
+      <section class="slide-enter space-y-4">
         <h5 class="font-semibold text-black dark:text-white">
           Let's Connect
         </h5>
