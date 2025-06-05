@@ -44,7 +44,7 @@ header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;
   @apply bg-notebook-light-bg/75 dark:bg-notebook-dark-bg/25;
   @apply backdrop-blur-sm saturate-200;
-  .animated-logo {
+  svg {
     @apply text-notebook-light-txt dark:text-notebook-dark-txt;
   }
 }
@@ -105,7 +105,7 @@ html.scrolled #back-to-top {
 }
 
 /* Logo SVG draw animation */
-@keyframes draw {
+@keyframes draw-wipe {
   0% {
     stroke-dashoffset: 1px;
     stroke-dasharray: 0 3665px;
@@ -127,38 +127,32 @@ html.scrolled #back-to-top {
   }
 }
 
-@keyframes draw-reverse {
-  0% {
-    stroke-dasharray: 3665px 0;
-    stroke-dashoffset: 1px;
-    opacity: 1;
-  }
-  20% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-    stroke-dasharray: 0 3665px;
-  }
-  /* Moving back */
-  45% {
-    stroke-dasharray: 0 3665px;
-  }
-  60% {
-    opacity: 1;
-  }
-  95%,
-  to {
-    stroke-dasharray: 3665px 0;
-  }
-}
+@theme {
+  --animate-wipe-draw: wipe-draw 10s ease 1s forwards infinite;
 
-.animated-logo.animate-draw path {
-  animation: draw 3s ease forwards 1;
-  animation-delay: 0.1s;
-}
-
-.animated-logo.animate-draw-reverse path {
-  animation: draw-reverse 3s ease forwards 1;
-  animation-delay: 0.1s;
+  @keyframes wipe-draw {
+    0% {
+      stroke-dasharray: 3665px 0;
+      stroke-dashoffset: 1px;
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+      stroke-dasharray: 0 3665px;
+    }
+    /* Moving back */
+    30% {
+      stroke-dasharray: 0 3665px;
+    }
+    40% {
+      opacity: 1;
+    }
+    50%,
+    to {
+      stroke-dasharray: 3665px 0;
+    }
+  }
 }

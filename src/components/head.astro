@@ -67,8 +67,6 @@ function init() {
   onScroll();
   initSlideEnterToArticle();
   slideEnter();
-  // initLogoMountedAnimation();
-  initLogoHoverAnimation();
 
   const backToTop = document.getElementById("back-to-top");
   backToTop?.addEventListener("click", event => scrollToTop(event));
@@ -120,42 +118,6 @@ function slideEnter() {
   slideEnterElements.forEach((element, index) => {
     element.style.setProperty("--stagger", index + 1);
   });
-}
-
-// function initLogoMountedAnimation() {
-//   const animatedLogo = document.querySelector(".animated-logo");
-//   if (!animatedLogo)
-//     return;
-
-//   animatedLogo.classList.remove("animate-draw");
-//   void animatedLogo.offsetHeight;
-//   animatedLogo.classList.add("animate-draw");
-
-//   animatedLogo.addEventListener("animationend", () => {
-//     animatedLogo.classList.remove("animate-draw");
-//   });
-// }
-
-function initLogoHoverAnimation() {
-  const logoTrigger = document.querySelector(".logo-trigger");
-  const animatedLogo = document.querySelector(".animated-logo");
-
-  if (logoTrigger && animatedLogo) {
-    logoTrigger.addEventListener("mouseenter", () => {
-      // Ignore if already animating
-      if (animatedLogo.classList.contains("animate-draw-reverse")) {
-        return;
-      }
-
-      animatedLogo.classList.remove("animate-draw-reverse");
-      void animatedLogo.offsetHeight;
-      animatedLogo.classList.add("animate-draw-reverse");
-    });
-
-    animatedLogo.addEventListener("animationend", () => {
-      animatedLogo.classList.remove("animate-draw-reverse");
-    });
-  }
 }
 
 function onScroll() {
