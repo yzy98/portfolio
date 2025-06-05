@@ -1,16 +1,14 @@
 ---
 import Container from "@/components/container.astro";
 import Link from "@/components/link.astro";
-import { SITE } from "@/consts";
+import LogoSvg from "@/svg/logo-svg.astro";
 ---
 
 <header>
   <Container>
-    <div class="flex flex-wrap gap-y-2 justify-between">
-      <Link href="/" underline={false}>
-        <div class="font-semibold">
-          {SITE.NAME}
-        </div>
+    <div class="flex flex-wrap gap-y-2 justify-between items-center">
+      <Link href="/" underline={false} class="logo-trigger">
+        <LogoSvg class="size-10 animated-logo" />
       </Link>
       <nav class="flex gap-1">
         <Link href="/projects">

@@ -44,6 +44,9 @@ header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;
   @apply bg-notebook-light-bg/75 dark:bg-notebook-dark-bg/25;
   @apply backdrop-blur-sm saturate-200;
+  .animated-logo {
+    @apply text-notebook-light-txt dark:text-notebook-dark-txt;
+  }
 }
 
 main {
@@ -99,4 +102,63 @@ html.scrolled #back-to-top {
   --start: 0ms;
   animation: slide-animation 0.7s both 1;
   animation-delay: calc(var(--start) + var(--stagger) * var(--delay));
+}
+
+/* Logo SVG draw animation */
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1px;
+    stroke-dasharray: 0 3665px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    stroke-dasharray: 3665px 0;
+  }
+  /* Moving back */
+  85% {
+    stroke-dasharray: 3665px 0;
+  }
+  95%,
+  to {
+    stroke-dasharray: 0 3665px;
+  }
+}
+
+@keyframes draw-reverse {
+  0% {
+    stroke-dasharray: 3665px 0;
+    stroke-dashoffset: 1px;
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    stroke-dasharray: 0 3665px;
+  }
+  /* Moving back */
+  45% {
+    stroke-dasharray: 0 3665px;
+  }
+  60% {
+    opacity: 1;
+  }
+  95%,
+  to {
+    stroke-dasharray: 3665px 0;
+  }
+}
+
+.animated-logo.animate-draw path {
+  animation: draw 3s ease forwards 1;
+  animation-delay: 0.1s;
+}
+
+.animated-logo.animate-draw-reverse path {
+  animation: draw-reverse 3s ease forwards 1;
+  animation-delay: 0.1s;
 }
