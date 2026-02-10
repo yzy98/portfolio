@@ -1,7 +1,7 @@
 ---
 title: "Prediction Market"
 description: "A DeFi Prediction Market application implementing a prediction market protocol with AMM mechanics, dynamic probability pricing, liquidity provision, and oracle-based resolution"
-date: "February 10 2026"
+date: "December 9 2025"
 category: "blockchain"
 repoURL: "https://github.com/yzy98/defi-prediction-market"
 ---
