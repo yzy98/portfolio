@@ -2,6 +2,7 @@
 title: "Next.js Starter Template Paddle"
 description: "A modern Nextjs full-stack starter template with authentication, database, payments, and UI components."
 date: "December 5 2024"
+category: "general"
 repoURL: "https://github.com/yzy98/nextjs-starter-template-paddle"
 ---
 

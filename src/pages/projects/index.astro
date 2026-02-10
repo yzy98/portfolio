@@ -6,23 +6,41 @@ import PageLayout from "@/layouts/page-layout.astro";
 import { getProjects } from "@/lib/data-utils";
 
 const projects = await getProjects();
+const blockchainProjects = projects.filter(p => p.data.category === "blockchain");
+const generalProjects = projects.filter(p => p.data.category === "general");
 ---
 
 <PageLayout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION}>
   <Container>
-    <div class="space-y-10">
-      <div class="slide-enter font-semibold text-black dark:text-white">
-        Projects
-      </div>
-      <ul class="slide-enter flex flex-col gap-4">
-        {
-          projects.map(project => (
-            <li>
-              <ArrowCard entry={project} />
-            </li>
-          ))
-        }
-      </ul>
+    <div class="space-y-12">
+      <section class="space-y-6">
+        <div class="slide-enter font-semibold text-black dark:text-white">
+          Web3 & Blockchain
+        </div>
+        <ul class="slide-enter flex flex-col gap-4">
+          {
+            blockchainProjects.map(project => (
+              <li>
+                <ArrowCard entry={project} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      <section class="space-y-6">
+        <div class="slide-enter font-semibold text-black dark:text-white">
+          General
+        </div>
+        <ul class="slide-enter flex flex-col gap-4">
+          {
+            generalProjects.map(project => (
+              <li>
+                <ArrowCard entry={project} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
     </div>
   </Container>
 </PageLayout>

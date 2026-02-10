@@ -27,6 +27,7 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
+    category: z.enum(["blockchain", "general"]),
     draft: z.boolean().optional(),
     demoURL: z.string().optional(),
     repoURL: z.string().optional(),
