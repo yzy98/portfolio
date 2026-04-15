@@ -25,9 +25,9 @@ Next.js Starter Template Paddle is a a modern Nextjs full-stack starter template
 | Rate Limiting  | [Upstash](https://upstash.com/)                                                      |
 | Email          | [Resend](https://resend.com/home)                                                    |
 
-## Architecture
+## 🏗 Architecture
 
-![Architecture](/architecture.png)
+![Architecture](/nstp-architecture.png)
 
 ## 📋 Features
 
@@ -41,7 +41,3 @@ Next.js Starter Template Paddle is a a modern Nextjs full-stack starter template
 - ⚡️ TRPC and TanStack Query for end-to-end type-safe API
 - 📋 Table management with TanStack Table
 - 🛡️ Upstash for rate limiting
-
-## 🏛️ License
-
-MIT

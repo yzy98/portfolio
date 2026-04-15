@@ -39,7 +39,3 @@ Prediction Market is a prediction market protocol where users can trade binary o
 - **Probability-style pricing**: real-time probability visualization that responds to trades
 - **Role-based workflow**: separate interfaces for traders, LPs, and oracle operators
 - **Clear settlement flow**: oracle resolution enables deterministic redemption for winners
-
-## 🏛️ License
-
-MIT
