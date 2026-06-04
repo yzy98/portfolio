@@ -5,7 +5,7 @@ dateStart: "01/01/2024"
 dateEnd: "present"
 ---
 
-Developed and launched end-to-end products(e.g. [IntentSwap](/projects/intent-swap), [YouTube Comments Chat](/projects/youtube-comments-chat))
+Developed and launched end-to-end products(e.g. [IntentSwap](https://github.com/yzy98/intentswap), [YouTube Comments Chat](https://ytbcc.zyang.space))
 from concept to deployment using **React**, **Next.js** and **TypeScript**. Built Web3/blockchain features including intent-based swap flows, smart-contract integration,
 and automated execution via **Solidity** and **Cloudflare Workers**.
 Integrated on-chain/off-chain components with price oracles (**Chainlink**) and swap routing (**Uniswap V3**),

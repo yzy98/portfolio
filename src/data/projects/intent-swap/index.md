@@ -1,6 +1,6 @@
 ---
 title: "IntentSwap"
-description: "A decentralized intent-based token swap dApp that enables users to create conditional token swaps executed automatically when price conditions are met."
+description: "An on-chain conditional token swap dApp."
 date: "February 10 2026"
 category: "blockchain"
 repoURL: "https://github.com/yzy98/intentswap"

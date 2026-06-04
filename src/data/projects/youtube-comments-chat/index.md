@@ -1,6 +1,6 @@
 ---
 title: "YouTube Comments Chat"
-description: "A Chrome extension that displays YouTube comments and live chat as an overlay above the video."
+description: "Browser extension that improves YouTube experience."
 date: "September 20 2024"
 category: "general"
 demoURL: "https://ytbcc.zyang.space"

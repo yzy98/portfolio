@@ -1,9 +1,10 @@
 ---
 title: "Prediction Market"
-description: "A DeFi Prediction Market application implementing a prediction market protocol with AMM mechanics, dynamic probability pricing, liquidity provision, and oracle-based resolution"
+description: "DeFi prediction market with AMM pricing."
 date: "December 9 2025"
 category: "blockchain"
 repoURL: "https://github.com/yzy98/defi-prediction-market"
+draft: true
 ---
 
 Prediction Market is a prediction market protocol where users can trade binary outcomes (Yes/No) via an AMM. Prices move dynamically based on supply/demand (probability-style pricing), and an oracle resolves the market at the end so winning token holders can redeem for ETH.

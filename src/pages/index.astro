@@ -7,12 +7,10 @@ import Link from "@/components/link.astro";
 import WorkCard from "@/components/work-card.astro";
 import { HOME, SITE, SOCIALS } from "@/consts";
 import PageLayout from "@/layouts/page-layout.astro";
-import { getBlogs, getProjects, getWorks } from "@/lib/data-utils";
+import { getProjects, getWorks } from "@/lib/data-utils";
 import GithubSvg from "@/svg/github-svg.astro";
 import MailSvg from "@/svg/mail-svg.astro";
 import XSvg from "@/svg/x-svg.astro";
-
-const displayedBlogs = (await getBlogs()).slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
 const displayedProjects = (await getProjects()).slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
@@ -88,24 +86,6 @@ const work = await Promise.all(
         <ul class="flex flex-col space-y-4">
           {work.map(entry => (
             <WorkCard entry={entry} slide={false} />
-          ))}
-        </ul>
-      </section>
-
-      <section class="slide-enter space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Latest posts
-          </h5>
-          <Link href="/blog">
-            See all posts
-          </Link>
-        </div>
-        <ul class="flex flex-col gap-4">
-          {displayedBlogs.map(post => (
-            <li>
-              <ArrowCard entry={post} />
-            </li>
           ))}
         </ul>
       </section>

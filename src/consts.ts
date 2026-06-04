@@ -1,21 +1,15 @@
-import type { Metadata, Site, Socials } from "@/types";
+import type { Metadata, Site, Social } from "@/types";
 
 export const SITE: Site = {
   NAME: "ZYANG",
   EMAIL: "yz186337@gmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 2,
-  NUM_PROJECTS_ON_HOMEPAGE: 3,
+  NUM_PROJECTS_ON_HOMEPAGE: 2,
 };
 
 export const HOME: Metadata = {
   TITLE: "Home",
   DESCRIPTION: "A portfolio website of Zi Yang.",
-};
-
-export const BLOG: Metadata = {
-  TITLE: "Blog",
-  DESCRIPTION: "A collection of articles on topics I am passionate about.",
 };
 
 export const WORK: Metadata = {
@@ -28,7 +22,7 @@ export const PROJECTS: Metadata = {
   DESCRIPTION: "A collection of my projects, with links to repositories and demos.",
 };
 
-export const SOCIALS: Socials = [
+export const SOCIALS: Social[] = [
   {
     NAME: "x",
     HREF: "https://x.com/zi_yang72005",
