@@ -2,7 +2,7 @@
 title: "YouTube Comments Chat"
 description: "Browser extension that improves YouTube experience."
 date: "September 20 2024"
-category: "general"
+category: "browser-extension"
 demoURL: "https://ytbcc.zyang.space"
 ---
 

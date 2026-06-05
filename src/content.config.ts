@@ -1,6 +1,8 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
+import { PROJECT_CATEGORIES } from "./consts";
+
 const work = defineCollection({
   loader: glob({ pattern: "**/[^_]*.{md,mdx}", base: "./src/data/work" }),
   schema: z.object({
@@ -17,7 +19,7 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
-    category: z.enum(["blockchain", "general"]),
+    category: z.enum(PROJECT_CATEGORIES),
     draft: z.boolean().optional(),
     demoURL: z.string().optional(),
     repoURL: z.string().optional(),

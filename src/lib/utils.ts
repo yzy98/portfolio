@@ -7,10 +7,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatDate(date: Date) {
+export function formatDate(date: Date | string) {
+  if (typeof date === "string") {
+    return date;
+  }
+
   return Intl.DateTimeFormat("en-US", {
     month: "short",
-    day: "2-digit",
     year: "numeric",
   }).format(date);
 }

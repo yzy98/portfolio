@@ -1,9 +1,9 @@
-import type { Metadata, Site, Social } from "@/types";
+import type { Metadata, ProjectCategory, Site, Social } from "@/types";
 
 export const SITE: Site = {
   NAME: "ZYANG",
   EMAIL: "yz186337@gmail.com",
-  NUM_WORKS_ON_HOMEPAGE: 2,
+  NUM_WORKS_ON_HOMEPAGE: 3,
   NUM_PROJECTS_ON_HOMEPAGE: 2,
 };
 
@@ -32,3 +32,15 @@ export const SOCIALS: Social[] = [
     HREF: "https://github.com/yzy98",
   },
 ];
+
+export const PROJECT_CATEGORIES = [
+  "blockchain",
+  "browser-extension",
+  "starter-kit",
+] as const;
+
+export const PROJECT_CATEGORY_LABELS: Record<ProjectCategory, string> = {
+  "blockchain": "Blockchain",
+  "browser-extension": "Browser Extensions",
+  "starter-kit": "Starter Kits",
+};

@@ -1,3 +1,5 @@
+import type { PROJECT_CATEGORIES } from "./consts";
+
 export type Site = {
   NAME: string;
   EMAIL: string;
@@ -14,3 +16,5 @@ export type Social = {
   NAME: string;
   HREF: string;
 };
+
+export type ProjectCategory = (typeof PROJECT_CATEGORIES)[number];

@@ -1,10 +1,8 @@
 ---
-import { render } from "astro:content";
-
 import ArrowCard from "@/components/arrow-card.astro";
 import Container from "@/components/container.astro";
 import Link from "@/components/link.astro";
-import WorkCard from "@/components/work-card.astro";
+import WorkTimeline from "@/components/work-timeline.astro";
 import { HOME, SITE, SOCIALS } from "@/consts";
 import PageLayout from "@/layouts/page-layout.astro";
 import { getProjects, getWorks } from "@/lib/data-utils";
@@ -15,13 +13,6 @@ import XSvg from "@/svg/x-svg.astro";
 const displayedProjects = (await getProjects()).slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
 const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
-
-const work = await Promise.all(
-  displayedWorks.map(async (item) => {
-    const { Content } = await render(item);
-    return { ...item, Content };
-  }),
-);
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
@@ -51,7 +42,7 @@ const work = await Promise.all(
             <Link href="https://github.com/yzy98/ext-stack" aria-label="ExtStack" external>
               ExtStack.
             </Link>
-            It's an extension-first monorepo for launching AI-powered browser extensions with a complete SaaS backend, shared APIs, authentication, billing, and usage tracking foundations.
+            It's an extension-first monorepo for launching AI-ready browser extensions with a complete SaaS backend, shared APIs, authentication, billing, and usage tracking foundations.
           </p>
         </article>
       </section>
@@ -83,11 +74,7 @@ const work = await Promise.all(
             See all work
           </Link>
         </div>
-        <ul class="flex flex-col space-y-4">
-          {work.map(entry => (
-            <WorkCard entry={entry} slide={false} />
-          ))}
-        </ul>
+        <WorkTimeline entries={displayedWorks} />
       </section>
 
       <section class="slide-enter space-y-4">
