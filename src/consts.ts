@@ -19,7 +19,8 @@ export const WORK: Metadata = {
 
 export const PROJECTS: Metadata = {
   TITLE: "Projects",
-  DESCRIPTION: "A collection of my projects, with links to repositories and demos.",
+  DESCRIPTION:
+    "A collection of my projects, with links to repositories and demos.",
 };
 
 export const SOCIALS: Social[] = [
@@ -40,7 +41,7 @@ export const PROJECT_CATEGORIES = [
 ] as const;
 
 export const PROJECT_CATEGORY_LABELS: Record<ProjectCategory, string> = {
-  "blockchain": "Blockchain",
+  blockchain: "Blockchain",
   "browser-extension": "Browser Extensions",
   "starter-kit": "Starter Kits",
 };

@@ -16,7 +16,7 @@ const workWithContent = await Promise.all(
       ...item,
       Content,
     };
-  }),
+  })
 );
 ---
 
@@ -27,11 +27,9 @@ const workWithContent = await Promise.all(
         Work
       </div>
       <ul class="flex flex-col space-y-4">
-        {
-          workWithContent.map(entry => (
+        {workWithContent.map(entry => (
             <WorkCard entry={entry} slide={true} />
-          ))
-        }
+          ))}
       </ul>
     </div>
   </Container>

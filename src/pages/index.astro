@@ -10,7 +10,10 @@ import GithubSvg from "@/svg/github-svg.astro";
 import MailSvg from "@/svg/mail-svg.astro";
 import XSvg from "@/svg/x-svg.astro";
 
-const displayedProjects = (await getProjects()).slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+const displayedProjects = (await getProjects()).slice(
+  0,
+  SITE.NUM_PROJECTS_ON_HOMEPAGE
+);
 
 const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
 ---
@@ -25,24 +28,29 @@ const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
         <article class="space-y-4">
           <p class="slide-enter">
             I am a Fullstack Web Developer living in
-            <Link href="https://en.wikipedia.org/wiki/Suzhou" aria-label="Suzhou, China" external>
+            <Link href="https://en.wikipedia.org/wiki/Suzhou" external>
               Suzhou, China,
             </Link>
-            who focuses on building robust solutions and enjoys working with modern web technologies.
+            who focuses on building robust solutions and enjoys working with
+            modern web technologies.
           </p>
           <p class="slide-enter">
-          Previously, I received my master's degree in Information Technology from
-          <Link href="https://www.uq.edu.au/" aria-label="The University of Queensland" external>
-            The University of Queensland,
-          </Link>
-          where I developed a strong foundation in software development and problem-solving.
+            Previously, I received my master's degree in Information Technology
+            from
+            <Link href="https://www.uq.edu.au/" external>
+              The University of Queensland,
+            </Link>
+            where I developed a strong foundation in software development and
+            problem-solving.
           </p>
           <p class="slide-enter">
             Recently, I have been building a project named
-            <Link href="https://github.com/yzy98/ext-stack" aria-label="ExtStack" external>
+            <Link href="https://github.com/yzy98/ext-stack" external>
               ExtStack.
             </Link>
-            It's an extension-first monorepo for launching AI-ready browser extensions with a complete SaaS backend, shared APIs, authentication, billing, and usage tracking foundations.
+            It's an extension-first monorepo for launching AI-ready browser
+            extensions with a complete SaaS backend, shared APIs,
+            authentication, billing, and usage tracking foundations.
           </p>
         </article>
       </section>
@@ -52,9 +60,7 @@ const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
           <h5 class="font-semibold text-black dark:text-white">
             Recent projects
           </h5>
-          <Link href="/projects">
-            See all projects
-          </Link>
+          <Link href="/projects">See all projects</Link>
         </div>
         <ul class="flex flex-col gap-4">
           {displayedProjects.map(project => (
@@ -70,27 +76,28 @@ const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
           <h5 class="font-semibold text-black dark:text-white">
             Work Experience
           </h5>
-          <Link href="/work">
-            See all work
-          </Link>
+          <Link href="/work">See all work</Link>
         </div>
         <WorkTimeline entries={displayedWorks} />
       </section>
 
       <section class="slide-enter space-y-4">
-        <h5 class="font-semibold text-black dark:text-white">
-          Let's Connect
-        </h5>
+        <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
         <article>
           <p>
-            If you want to get in touch with me about something or just to say hi,
-            reach out on social media or send me an email.
+            If you want to get in touch with me about something or just to say
+            hi, reach out on social media or send me an email.
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
           {SOCIALS.map(SOCIAL => (
             <li class="flex gap-x-2">
-              <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`} underline={false}>
+              <Link 
+                external
+                href={SOCIAL.HREF}
+                label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+                underline={false}
+                >
                 {SOCIAL.NAME === "x" && <XSvg height={18} width={18} />}
                 {SOCIAL.NAME === "github" && <GithubSvg height={18} width={18} />}
               </Link>
@@ -98,7 +105,11 @@ const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
             </li>
           ))}
           <li class="flex">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`} underline={false}>
+            <Link
+              href={`mailto:${SITE.EMAIL}`}
+              label={`Email ${SITE.NAME}`}
+              underline={false}
+            >
               <MailSvg height={18} width={18} />
             </Link>
           </li>

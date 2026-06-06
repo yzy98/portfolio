@@ -11,13 +11,16 @@ const { entries } = Astro.props;
 ---
 
 <ol class="relative space-y-6 pl-5 sm:space-y-0 sm:pl-0">
-  <span class="absolute top-3 bottom-3 left-1.5 w-px bg-black/10 dark:bg-white/15 sm:left-1/2 sm:-translate-x-1/2" aria-hidden="true" />
+  <span
+    class="absolute top-3 bottom-3 left-1.5 w-px bg-black/10 dark:bg-white/15 sm:left-1/2 sm:-translate-x-1/2"
+    aria-hidden="true"
+  />
   {entries.map((entry, index) => {
     const isLeft = index % 2 === 0;
 
     return (
       <li class="relative grid grid-cols-[1rem_1fr] items-center gap-4 sm:grid-cols-[1fr_2rem_1fr]">
-        <div class="z-10 flex size-3 items-center justify-center justify-self-center rounded-full bg-white dark:bg-black sm:col-start-2">
+        <div class="z-10 flex size-3 items-center justify-center justify-self-center rounded-full bg-white sm:col-start-2 dark:bg-black">
           <span class="size-2 rounded-full bg-black ring-2 ring-black/15 dark:bg-white dark:ring-white/20" />
         </div>
         <div class={`${isLeft ? "sm:col-start-1 sm:row-start-1" : "sm:col-start-3 sm:row-start-1"}`}>

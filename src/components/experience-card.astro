@@ -10,7 +10,9 @@ type Props = {
 const { entry } = Astro.props;
 ---
 
-<article class="group flex overflow-hidden rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+<article
+  class="group flex overflow-hidden rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+>
   <div class="min-w-0 flex-1 px-4 py-3">
     <div class="text-black dark:text-white truncate">
       {entry.data.company}
@@ -19,7 +21,9 @@ const { entry } = Astro.props;
       {entry.data.role}
     </div>
   </div>
-  <div class="flex flex-col w-20 shrink-0 items-center justify-center border-l border-black/10 px-3 py-2.5 text-center text-xs opacity-75 dark:border-white/15">
+  <div
+    class="flex flex-col w-20 shrink-0 items-center justify-center border-l border-black/10 px-3 py-2.5 text-center text-xs opacity-75 dark:border-white/15"
+  >
     {formatDate(entry.data.dateStart)}
     {formatDate(entry.data.dateEnd)}
   </div>

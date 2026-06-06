@@ -7,19 +7,13 @@ import LogoSvg from "@/svg/logo-svg.astro";
 <header>
   <Container>
     <div class="flex flex-wrap gap-y-2 justify-between items-center">
-      <Link href="/" underline={false}>
+      <Link href="/" underline={false} label="home">
         <LogoSvg class="size-10" />
       </Link>
       <nav class="flex gap-1">
-        <Link href="/projects">
-          projects
-        </Link>
-        <span>
-          /
-        </span>
-        <Link href="/work">
-          work
-        </Link>
+        <Link href="/projects">projects</Link>
+        <span>/</span>
+        <Link href="/work">work</Link>
       </nav>
     </div>
   </Container>
