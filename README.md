@@ -6,7 +6,7 @@ A modern portfolio website built with Astro, featuring a clean design and smooth
 
 - **Framework:** [Astro](https://astro.build/)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
-- **Linting:** [ESLint](https://eslint.org/)
+- **Linting:** [Ultracite](https://docs.ultracite.ai/), [Biome](https://biomejs.dev/)
 - **Fonts:** [Fontsource (Lora, Roboto)](https://fontsource.org/)
 - **Content:** MDX, RSS Feed, Sitemap
 
