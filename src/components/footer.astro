@@ -15,11 +15,10 @@ import SunSvg from "@/svg/sun-svg.astro";
       </div>
     </div>
     <div class="flex justify-between items-center">
-      <div>
-        &copy; 2026 | {SITE.NAME}
-      </div>
+      <div>&copy; 2026 | {SITE.NAME}</div>
       <div class="flex flex-wrap gap-1 items-center">
         <button
+          type="button"
           id="light-theme-button"
           aria-label="Light theme"
           class="group size-8 flex items-center justify-center rounded-full"
@@ -31,6 +30,7 @@ import SunSvg from "@/svg/sun-svg.astro";
           />
         </button>
         <button
+          type="button"
           id="dark-theme-button"
           aria-label="Dark theme"
           class="group size-8 flex items-center justify-center rounded-full"
@@ -42,6 +42,7 @@ import SunSvg from "@/svg/sun-svg.astro";
           />
         </button>
         <button
+          type="button"
           id="system-theme-button"
           aria-label="System theme"
           class="group size-8 flex items-center justify-center rounded-full"

@@ -8,7 +8,12 @@ type Props = {
 const { entry } = Astro.props;
 ---
 
-<a href={entry.data.repoURL ?? entry.data.demoURL ?? "https://github.com/yzy98"} target="_blank" rel="noopener noreferrer" class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+<a
+  href={entry.data.repoURL ?? entry.data.demoURL ?? "https://github.com/yzy98"}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out"
+>
   <div class="flex flex-col gap-1 flex-1 min-w-0">
     <div class="text-black dark:text-white truncate">
       {entry.data.title}
@@ -22,7 +27,16 @@ const { entry } = Astro.props;
     viewBox="0 0 24 24"
     class="absolute top-1/2 right-2 -translate-y-1/2 size-5 stroke-2 fill-none stroke-current"
   >
-    <line x1="5" y1="12" x2="19" y2="12" class="translate-x-3 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
-    <polyline points="12 5 19 12 12 19" class="-translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
+    <line
+      x1="5"
+      y1="12"
+      x2="19"
+      y2="12"
+      class="translate-x-3 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"
+    />
+    <polyline
+      points="12 5 19 12 12 19"
+      class="-translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out"
+    />
   </svg>
 </a>
