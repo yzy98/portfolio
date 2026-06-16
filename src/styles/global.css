@@ -7,10 +7,16 @@
 @theme {
   --font-serif: "Lora", "serif";
   --font-sans: "Roboto", "sans-serif";
+  --color-black: #141413;
+  --color-white: #faf9f5;
+  --color-kami-brand: #1b365d;
+  --color-kami-ivory: #faf9f5;
+  --color-kami-sand: #e8e6dc;
+  --color-kami-stone: #6b6a64;
   --color-notebook-dark-bg: #2b2b2b;
   --color-notebook-dark-txt: #dcdcdc;
-  --color-notebook-light-bg: #f9f9f9;
-  --color-notebook-light-txt: #3a3a3a;
+  --color-notebook-light-bg: #f5f4ed;
+  --color-notebook-light-txt: #141413;
 }
 
 html.dark .astro-code,
@@ -37,13 +43,12 @@ body {
   @apply font-sans antialiased;
   @apply flex flex-col;
   @apply bg-notebook-light-bg dark:bg-notebook-dark-bg;
-  @apply text-notebook-light-txt/50 dark:text-notebook-dark-txt/75;
+  @apply text-notebook-light-txt/65 dark:text-notebook-dark-txt/75;
 }
 
 header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;
-  @apply bg-notebook-light-bg/75 dark:bg-notebook-dark-bg/25;
-  @apply backdrop-blur-sm saturate-200;
+  @apply bg-notebook-light-bg dark:bg-notebook-dark-bg;
   svg {
     @apply text-notebook-light-txt dark:text-notebook-dark-txt;
   }
