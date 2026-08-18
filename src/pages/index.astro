@@ -27,30 +27,31 @@ const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
       <section>
         <article class="space-y-4">
           <p class="slide-enter">
-            I am a Fullstack Web Developer living in
+            I am a Full-stack Web Developer living in{" "}
             <Link href="https://en.wikipedia.org/wiki/Suzhou" external>
-              Suzhou, China,
+              Suzhou, China
             </Link>
+            {", "}
             who focuses on building robust solutions and enjoys working with
             modern web technologies.
           </p>
           <p class="slide-enter">
-            Previously, I received my master's degree in Information Technology
-            from
-            <Link href="https://www.uq.edu.au/" external>
-              The University of Queensland,
-            </Link>
-            where I developed a strong foundation in software development and
-            problem-solving.
+            I am currently building{" "}
+            <Link href="https://github.com/yzy98/geho" external>Geho</Link>
+            {", "}
+            a self-hosted AI support platform that turns company knowledge into
+            grounded answers through hybrid retrieval, with embeddable chat and
+            traceable conversations.
           </p>
           <p class="slide-enter">
-            Recently, I have been building a project named
-            <Link href="https://github.com/yzy98/ext-stack" external>
-              ExtStack.
+            Recently, I joined the{" "}
+            <Link href="https://www.toptal.com/" external>
+              Toptal talent network
             </Link>
-            It's an extension-first monorepo for launching AI-ready browser
-            extensions with a complete SaaS backend, shared APIs,
-            authentication, billing, and usage tracking foundations.
+            {" "}
+            as a freelance full-stack developer, focusing on end-to-end product
+            development across frontend interfaces, backend services, and
+            AI-powered workflows.
           </p>
         </article>
       </section>
@@ -85,14 +86,14 @@ const displayedWorks = (await getWorks()).slice(0, SITE.NUM_WORKS_ON_HOMEPAGE);
         <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
         <article>
           <p>
-            If you want to get in touch with me about something or just to say
-            hi, reach out on social media or send me an email.
+            If you want to get in touch with me, reach out on social media or
+            send me an email.
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
           {SOCIALS.map(SOCIAL => (
             <li class="flex gap-x-2">
-              <Link 
+              <Link
                 external
                 href={SOCIAL.HREF}
                 label={`${SITE.NAME} on ${SOCIAL.NAME}`}

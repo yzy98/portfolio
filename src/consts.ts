@@ -35,12 +35,14 @@ export const SOCIALS: Social[] = [
 ];
 
 export const PROJECT_CATEGORIES = [
+  "ai",
   "blockchain",
   "browser-extension",
   "starter-kit",
 ] as const;
 
 export const PROJECT_CATEGORY_LABELS: Record<ProjectCategory, string> = {
+  ai: "AI",
   blockchain: "Blockchain",
   "browser-extension": "Browser Extensions",
   "starter-kit": "Starter Kits",
